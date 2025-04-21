@@ -20,7 +20,12 @@ It's meant to be used with already decoded text tokens/chunks.
 Add this to your `Cargo.toml`:
 ```toml
 [dependencies]
-token_processor = { path = "https://github.com/ljt019/token_processor_rs"}
+token_processor = { path = "https://github.com/ljt019/token_processor"}
+```
+
+Or use cargo: 
+```shell
+cargo add token_processor
 ```
 
 ## Quickstart
