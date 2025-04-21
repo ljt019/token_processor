@@ -6,7 +6,6 @@ use std::future::Future;
 use std::pin::Pin;
 use thiserror::Error;
 
-// --- TYPE ALIASES ---
 type StreamingOpenHandler = Box<dyn FnMut() + Send>;
 type StreamingDataHandler = Box<dyn FnMut(&str) + Send>;
 type StreamingCloseHandler = Box<dyn FnMut() + Send>;
