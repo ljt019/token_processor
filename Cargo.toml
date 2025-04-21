@@ -5,7 +5,7 @@ version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 license-file = "license.md"
-repository = "https://github.com/ljt019/token_processor_rs/"
+repository = "https://github.com/ljt019/token_processor/"
 
 [dependencies]
 aho-corasick = "1.1.3"

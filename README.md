@@ -1,8 +1,9 @@
 # token_processor
 
 <!-- CI / Workflow Badges -->
-[![Tests](https://github.com/ljt019/token_processor_rs/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/ljt019/token_processor_rs/actions/workflows/tests.yml)
-[![Doc Tests](https://github.com/ljt019/token_processor_rs/actions/workflows/doc_tests.yml/badge.svg?branch=main)](https://github.com/ljt019/token_processor_rs/actions/workflows/doc_tests.yml)
+[![Tests](https://github.com/ljt019/token_processor/actions/workflows/tests.yml/badge.svg?branch=main)]
+[![Doc Tests](https://github.com/ljt019/token_processor/actions/workflows/doc_tests.yaml/badge.svg?branch=main)]
+
 
 A fast, streaming‐oriented token processor for Large Language Model output in Rust.
 
