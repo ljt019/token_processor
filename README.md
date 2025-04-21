@@ -1,9 +1,8 @@
 # token_processor
 
 <!-- CI / Workflow Badges -->
-[![Doc Tests](https://github.com/<USERNAME>/<REPO>/actions/workflows/doc-tests.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/doc-tests.yml)
-[![Tests](https://github.com/<USERNAME>/<REPO>/actions/workflows/tests.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/tests.yml)
-[![docs.rs](https://docs.rs/token_processor/badge.svg)](https://docs.rs/token_processor)
+[![Doc Tests](https://github.com/ljt019/token_processor_rs/actions/workflows/doc-tests.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/doc-tests.yml)
+[![Tests](https://github.com/ljt019/token_processor_rs/actions/workflows/tests.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/tests.yml)
 
 A fast, streaming‐oriented token processor for tagged text in Rust.
 
@@ -18,7 +17,7 @@ A fast, streaming‐oriented token processor for tagged text in Rust.
 Add this to your `Cargo.toml`:
 ```toml
 [dependencies]
-token_processor = "0.1.0"
+token_processor = { path = "https://github.com/ljt019/token_processor_rs"}
 ```
 
 ## Quickstart

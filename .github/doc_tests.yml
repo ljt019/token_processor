@@ -1,0 +1,24 @@
+name: Doc Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  doctests:
+    name: Run Documentation Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Run cargo doc tests
+        run: cargo test --doc --locked --verbose
