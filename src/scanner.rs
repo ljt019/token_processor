@@ -98,9 +98,6 @@ impl Scanner {
     /// `tags`: List of `Tag` pairs defining the open/close literals.
     /// `max_buffer`: Maximum bytes to buffer waiting for a match end.
     pub fn new(tags: &[Tag], max_buffer: usize) -> Result<Self, ScannerError> {
-        if tags.is_empty() {
-            panic!("tags cannot be empty");
-        }
         let patterns_flat: Vec<String> = tags
             .iter()
             .flat_map(|tag| vec![tag.open.clone(), tag.close.clone()])
