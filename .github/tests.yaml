@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
-
+      
 jobs:
   test:
     name: Run Tests
