@@ -1,10 +1,12 @@
 # token_processor
 
 <!-- CI / Workflow Badges -->
-[![Doc Tests](https://github.com/ljt019/token_processor_rs/actions/workflows/doc-tests.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/doc-tests.yml)
-[![Tests](https://github.com/ljt019/token_processor_rs/actions/workflows/tests.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/tests.yml)
+[![Tests](https://github.com/ljt019/token_processor_rs/actions/workflows/tests.yml/badge.svg)](https://github.com/ljt019/token_processor_rs/actions/workflows/tests.yml)
+[![Doc Tests](https://github.com/ljt019/token_processor_rs/actions/workflows/doc_tests.yml/badge.svg)](https://github.com/ljt019/token_processor_rs/actions/workflows/doc_tests.yml)
 
-A fast, streaming‐oriented token processor for tagged text in Rust.
+A fast, streaming‐oriented token processor for Large Language Model output in Rust.
+
+It's meant to be used with already decoded text tokens/chunks.
 
 ## Features
 
