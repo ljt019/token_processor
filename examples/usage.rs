@@ -2,7 +2,7 @@ use futures::StreamExt;
 use serde::{Deserialize, Serialize};
 use serde_json;
 use std::io::Write;
-use token_processor::{Event, Scanner, Tag};
+use token_processor::{Event, Tag, TokenProcessor};
 
 #[derive(Serialize)]
 struct OllamaRequest {
@@ -14,17 +14,17 @@ struct OllamaRequest {
 
 #[derive(Deserialize, Debug)]
 struct OllamaResponse {
-    _model: String,
-    _created_at: String,
+    model: String,
+    created_at: String,
     response: String,
-    _done: bool,
+    done: bool,
 }
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let tags = vec![Tag::new("<think>")];
 
-    let mut s = Scanner::new(&tags, 1024).unwrap();
+    let mut token_processor = TokenProcessor::new(&tags)?;
 
     // Initialize reqwest client
     let client = reqwest::Client::new();
@@ -56,7 +56,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         match serde_json::from_str::<OllamaResponse>(&json_text) {
             Ok(ollama_response) => {
-                let events = s.feed(&ollama_response.response)?;
+                let events = token_processor.process(&ollama_response.response)?;
 
                 for event in events {
                     match event {
