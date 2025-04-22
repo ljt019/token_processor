@@ -1,7 +1,7 @@
 [package]
 name = "token_processor"
 description = "A fast, streaming‐oriented token processor for Large Language Model output in Rust. It's meant to be used with already decoded text tokens/chunks."
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 license-file = "license.md"
