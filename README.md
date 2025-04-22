@@ -2,7 +2,7 @@
 
 <!-- CI / Workflow Badges -->
 [<img alt="crates.io" src="https://img.shields.io/crates/v/token_processor.svg?style=for-the-badge&color=fc8d62&logo=rust" height="19">](https://crates.io/crates/token_processor)
-[<img alt="docs.rs" src="https://img.shields.io/badge/docs.rs-syn-66c2a5?style=for-the-badge&labelColor=555555&logo=docs.rs" height="19">](https://docs.rs/syn)
+[<img alt="docs.rs" src="https://img.shields.io/badge/docs.rs-token_processor-66c2a5?style=for-the-badge&labelColor=555555&logo=docs.rs" height="19">](https://docs.rs/token_processor)
 ![Build](https://github.com/ljt019/token_processor/actions/workflows/build_and_release.yaml/badge.svg?branch=main)
 ![Tests](https://github.com/ljt019/token_processor/actions/workflows/tests.yaml/badge.svg?branch=main)
 ![Doc Tests](https://github.com/ljt019/token_processor/actions/workflows/doc_tests.yaml/badge.svg?branch=main)
