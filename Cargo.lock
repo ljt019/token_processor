@@ -248,7 +248,7 @@ dependencies = [
 
 [[package]]
 name = "token_processor"
-version = "0.1.3"
+version = "0.1.4"
 dependencies = [
  "aho-corasick",
  "thiserror",
