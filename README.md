@@ -1,7 +1,7 @@
 # token_processor
 
 <!-- CI / Workflow Badges -->
-[<img alt="crates.io" src="https://img.shields.io/crates/v/token_processor.svg?style=for-the-badge&color=fc8d62&logo=rust" height="18">](https://crates.io/crates/token_processor)
+[<img alt="crates.io" src="https://img.shields.io/crates/v/token_processor.svg?style=for-the-badge&color=fc8d62&logo=rust" height="19">](https://crates.io/crates/token_processor)
 ![Build](https://github.com/ljt019/token_processor/actions/workflows/build_and_release.yaml/badge.svg?branch=main)
 ![Tests](https://github.com/ljt019/token_processor/actions/workflows/tests.yaml/badge.svg?branch=main)
 ![Doc Tests](https://github.com/ljt019/token_processor/actions/workflows/doc_tests.yaml/badge.svg?branch=main)
