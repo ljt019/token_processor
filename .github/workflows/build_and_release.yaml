@@ -54,15 +54,9 @@ jobs:
       - name: Build release
         run: cargo build --release --locked
 
-      - name: Upload release artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-asset
-          path: target/release/token_processor.exe
-
   publish_to_crates_io:
     name: Publish to crates.io
-    needs: build 
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -80,18 +74,13 @@ jobs:
 
   create_github_release:
     name: Create Github Release
-    needs: build 
+    needs: build
     runs-on: ubuntu-latest
     permissions:
-      contents: write 
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Download release artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: release-asset
 
       - name: Extract version from Cargo.toml
         id: get_version
@@ -100,6 +89,5 @@ jobs:
       - name: Create Github Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "token_processor.exe"
           tag: v${{ steps.get_version.outputs.version }}
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          token: ${{ secrets.GITHUB_TOKEN }}
