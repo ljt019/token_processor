@@ -54,7 +54,7 @@ jobs:
       - name: Build release
         run: cargo build --release --locked
 
-  publish:
+  publish_to_crates_io:
     name: Publish to crates.io
     needs: build
     runs-on: ubuntu-latest
@@ -71,3 +71,14 @@ jobs:
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
         run: cargo publish --locked
+
+      - name: Extract version from Cargo.toml
+        id: get_version
+        run: echo "::set-output name=version::$(grep '^version =' Cargo.toml | cut -d '"' -f 2)"
+
+      - name: Create Github Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "target/release/token_processor.exe"
+          # Use the extracted version for the tag, prefixed with 'v'
+          tag: v${{ steps.get_version.outputs.version }}
